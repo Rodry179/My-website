@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع المانجا والأنيمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #2c2c2c;
+            --text-color: #ffffff;
+            --accent-color: #ff4081;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .neumorphic {
+            background: var(--secondary-color);
+            box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1f1f1f;
+            border-radius: 15px;
+        }
+
+        .anime-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #darkModeToggle {
+            background-color: var(--secondary-color);
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #darkModeToggle:hover {
+            background-color: var(--accent-color);
+        }
+
+        .search-input {
+            background-color: var(--secondary-color);
+            border: none;
+            color: var(--text-color);
+            padding: 10px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .search-input::placeholder {
+            color: #888;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="neumorphic p-4 mb-6">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">موقع المانجا والأنيمي</h1>
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle" class="text-sm">🌙</button>
+                <input type="text" placeholder="ابحث عن مانجا أو أنيمي" class="search-input">
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">أحدث الإضافات</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=1" alt="أنيمي 1" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم الأنيمي 1</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=2" alt="أنيمي 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم الأنيمي 2</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=3" alt="مانجا 1" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم المانجا 1</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=4" alt="مانجا 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم المانجا 2</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">الأكثر مشاهدة</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=5" alt="أنيمي 3" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم الأنيمي 3</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=6" alt="أنيمي 4" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم الأنيمي 4</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=7" alt="مانجا 3" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم المانجا 3</h3>
+                </div>
+                <div class="anime-card neumorphic p-4 fade-in">
+                    <img src="https://picsum.photos/300/400?random=8" alt="مانجا 4" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-lg font-semibold">اسم المانجا 4</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="neumorphic p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>جميع الحقوق محفوظة © 2023 موقع المانجا والأنيمي</p>
+            <a href="https://wa.me/your_whatsapp_number" class="inline-block mt-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">تواصل معنا عبر واتساب</a>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                darkModeToggle.textContent = '☀️';
+                document.documentElement.style.setProperty('--primary-color', '#f0f0f0');
+                document.documentElement.style.setProperty('--secondary-color', '#ffffff');
+                document.documentElement.style.setProperty('--text-color', '#333333');
+            } else {
+                darkModeToggle.textContent = '🌙';
+                document.documentElement.style.setProperty('--primary-color', '#1a1a1a');
+                document.documentElement.style.setProperty('--secondary-color', '#2c2c2c');
+                document.documentElement.style.setProperty('--text-color', '#ffffff');
+            }
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation to cards when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anime-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
